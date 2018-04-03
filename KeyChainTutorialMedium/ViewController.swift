@@ -38,5 +38,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func deletePasswordButtonTapped(_ sender: UIButton) {
+        
+        let deleteSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: "userPassword")
+        
+        print("Deletion was successful: \(deleteSuccessful)")
+    }
+    
 }
 
