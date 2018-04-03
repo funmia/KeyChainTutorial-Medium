@@ -1,0 +1,6 @@
+framework module Pods_KeyChainTutorialMedium {
+  umbrella header "Pods-KeyChainTutorialMedium-umbrella.h"
+
+  export *
+  module * { export * }
+}

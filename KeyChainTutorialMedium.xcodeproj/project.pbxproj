@@ -12,6 +12,7 @@
 		04E768D020742FA700FB33E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E768CE20742FA700FB33E9 /* Main.storyboard */; };
 		04E768D220742FA700FB33E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E768D120742FA700FB33E9 /* Assets.xcassets */; };
 		04E768D520742FA700FB33E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E768D320742FA700FB33E9 /* LaunchScreen.storyboard */; };
+		8474F75EFDC8A7BEC3241CF8 /* Pods_KeyChainTutorialMedium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AEDDD2E31E8FC9200DE51C /* Pods_KeyChainTutorialMedium.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		04E768D120742FA700FB33E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E768D420742FA700FB33E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E768D620742FA700FB33E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13AEDDD2E31E8FC9200DE51C /* Pods_KeyChainTutorialMedium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyChainTutorialMedium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2903269BFF5E5A246E02B2D8 /* Pods-KeyChainTutorialMedium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyChainTutorialMedium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyChainTutorialMedium/Pods-KeyChainTutorialMedium.debug.xcconfig"; sourceTree = "<group>"; };
+		55F87B0323F673369FEC843E /* Pods-KeyChainTutorialMedium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyChainTutorialMedium.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyChainTutorialMedium/Pods-KeyChainTutorialMedium.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8474F75EFDC8A7BEC3241CF8 /* Pods_KeyChainTutorialMedium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0104005BCAB72156AF981825 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2903269BFF5E5A246E02B2D8 /* Pods-KeyChainTutorialMedium.debug.xcconfig */,
+				55F87B0323F673369FEC843E /* Pods-KeyChainTutorialMedium.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		04E768BE20742FA700FB33E9 = {
 			isa = PBXGroup;
 			children = (
 				04E768C920742FA700FB33E9 /* KeyChainTutorialMedium */,
 				04E768C820742FA700FB33E9 /* Products */,
+				0104005BCAB72156AF981825 /* Pods */,
+				09890E922DBE8E77C320FA5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = KeyChainTutorialMedium;
 			sourceTree = "<group>";
 		};
+		09890E922DBE8E77C320FA5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13AEDDD2E31E8FC9200DE51C /* Pods_KeyChainTutorialMedium.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04E768D920742FA700FB33E9 /* Build configuration list for PBXNativeTarget "KeyChainTutorialMedium" */;
 			buildPhases = (
+				A6F55EB07798B709B6E71C6B /* [CP] Check Pods Manifest.lock */,
 				04E768C320742FA700FB33E9 /* Sources */,
 				04E768C420742FA700FB33E9 /* Frameworks */,
 				04E768C520742FA700FB33E9 /* Resources */,
+				EDD6A3F13ABA8F42127DD400 /* [CP] Embed Pods Frameworks */,
+				DAAAF79C5FE112790D4E8B93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6F55EB07798B709B6E71C6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAAAF79C5FE112790D4E8B93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyChainTutorialMedium/Pods-KeyChainTutorialMedium-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDD6A3F13ABA8F42127DD400 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyChainTutorialMedium/Pods-KeyChainTutorialMedium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04E768C320742FA700FB33E9 /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		04E768DA20742FA700FB33E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2903269BFF5E5A246E02B2D8 /* Pods-KeyChainTutorialMedium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +362,7 @@
 		};
 		04E768DB20742FA700FB33E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F87B0323F673369FEC843E /* Pods-KeyChainTutorialMedium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
